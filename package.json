@@ -1,0 +1,19 @@
+{
+  "name": "6project_co_win_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Tanmoy Barman",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.1.6"
+  }
+}
