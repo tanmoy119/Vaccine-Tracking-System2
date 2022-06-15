@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book appointment</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    {{!-- <link rel="stylesheet" type="text/css" href="font/flaticon.css"> --}}
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+:root{
+  --font-light: #808080;
+  --primary-color: #FAED00;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.book {
+    box-shadow: 0px 5px 13px -3px rgba(0,0,0,0.75);
+    display: flex;
+    flex-wrap: wrap;
+   
+} 
+.description , .form{
+    width: 40%;
+    padding: 5%;
+}
+.description h1 {
+    text-transform: uppercase;
+    color: var(--font-light);
+    font-weight: 400;
+    margin-top: 0;
+}
+.description h1 strong{
+  font-weight: 700;
+  color: #000;
+}
+.description p {
+    color: var(--font-light);
+    font-size: 14px;
+    line-height: 22px;
+}
+.quote p {
+    font-style: italic;
+    padding: 2%;
+    border-left: 4px solid var(--primary-color);
+}
+.description ul {
+    padding-left: 16px;
+    list-style: circle;
+}
+.description ul li{
+    margin: 10px 0;
+}
+.form{
+  background: var(--primary-color);
+}
+.form form{
+  color: var(--font-light);
+    display: flex;
+  flex-wrap: wrap;
+}
+.inpbox.full {
+    width: 100%;
+    background: #fff;
+    padding: 3%;
+    margin-bottom: 20px ;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.inpbox span::before {
+    margin-left: 0;
+}
+.inpbox span {
+    padding-right: 10px;
+    border-right: 2px solid var(--font-light);
+}
+.form select{
+    border: 0;
+    width: 90%;
+    color: var(--font-light);
+}
+form input {
+    border: 0;
+    width: 74%;
+    color: var(--font-light);
+    padding: 0 4%;
+}
+.form select:focus, form input {
+  outline: none;
+}
+.inpbox {
+    width: 42%;
+    background: #fff;
+    padding: 3%;
+    margin-bottom: 20px;
+    margin-right: 2%;
+}
+.inrbox{
+  width: 33%;
+  color: #000;
+}
+.inrbox span{
+  padding-right: 10px;
+}
+.inrbox span {
+    border: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.form input[type="radio"] {
+    width: unset;
+}
+button.subt, button.rst{
+  padding: 2% 3%;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+}
+button.subt {
+    margin-right: 3%;
+    background: #fff;
+}
+button.rst {
+    background: #000;
+    color: #fff;
+}
+    </style>
+
+    
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/appoinment.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="book">
+        <div class="description">
+          <h1><strong>Book</strong> your Appointment</h1>
+          <p>
+            The pros to scheduling is having a system or a scheduling system in the medical office that you’re working in. Also knowing when your physician’s availability and having knowledge of that physician specialty. The way of accomplishing this is to have excellent communication with your physician it keeps you a step ahead of the game. Knowing where and when your physician will be make a scheduler job much easier. Documentation I mention this a lot because it is a backup plan if you forget!!!
+          </p>
+          <div class="quote">
+            <p>
+              To reduce the burden of COVID-19 Pandemic,COVID-19 vaccination programme was started
+              by Government from 16 January 2021. In the first phase Health Care Workers and in the
+              second phase, Frontline Workers including Election personnel are being vaccinated. In the
+              third phase, from 1
+              st March 2021, vaccination of citizens of age-appropriate categories and
+              with co-morbidities is starting.
+              
+            </p>
+          </div>
+          <ul>
+            <li>Super reliable service</li>
+            <li>24/7 customer srvice</li>
+            <li>GPS tracking and help</li>
+           
+          </ul>
+        </div>
+        <div class="form">
+          <form method="POST">
+            <div class="inpbox full">
+              <span class="flaticon-taxi"></span>
+              <select name="doctorid" id="cars" name="cars">
+                <option value="">Select Doctor</option>
+                <option value="volvo">Dr.Rajarshi</option>
+                <option value="saab">Dr.Tanmoy</option>
+                <option value="fiat">Dr.Aishik</option>
+                <option value="audi">Dr.Sankhadeep</option>
+              </select>
+            </div>
+            <div class="inpbox">
+              <span class="flaticon-globe"></span>
+              <input name="location" type="text" placeholder="Location">
+            </div>
+            <div class="inpbox">
+              <span class="flaticon-calendar"></span>
+              <input name="time" type="date" placeholder=" Date">
+            </div>
+            <!-- <div class="inpbox">
+              <span class="flaticon-location"></span>
+              <input type="text" placeholder="Drop Location">
+            </div> -->
+            <!-- <div class="inpbox">
+              <span class="flaticon-calendar"></span>
+              <input type="date" placeholder="Drop Date">
+            </div> -->
+            <!-- <div class="inpbox">
+              <span class="flaticon-user"></span>
+              <input type="text" placeholder="Full Name">
+            </div>
+            <div class="inpbox">
+              <span class="flaticon-email"></span>
+              <input type="email" placeholder="Email">
+            </div> -->
+            <div class="inpbox full">
+              <div class="inrbox">
+                <span class="flaticon-taxi">Morning</span>
+                <input type="radio" name="times" value="9am-12pm">
+                <h3>9am-12pm </h3>
+                <!-- <span>1 Passenger</span> -->
+              </div>
+              <div class="inrbox">
+                <span class="flaticon-taxi">Noon</span>
+                <input type="radio" name="times" value="2pm-5pm">
+                <h3>2pm-5pm</h3>
+                <!-- <span>2 Passenger</span> -->
+              </div>
+              <div class="inrbox">
+                <span class="flaticon-taxi">Evening</span>
+                <input type="radio" name="times" value="6pm-9pm">
+                <h3>6pm-9pm</h3>
+                <!-- <span>4 Passenger</span> -->
+              </div>
+            </div>
+            <button type="submit" class="subt">Submit</button>
+            <button class="rst">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

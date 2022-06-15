@@ -36,7 +36,17 @@
             <a href="#prevent">prevent</a>
             <a href="#experts">experts</a>
             <a href="#contact">contact</a>
-            <a href="#blogs">blogs</a>
+            
+            {{#if type}}
+                <a href="/add/appointment?email={{email}}">Book Appointment</a>
+            {{else}}
+             {{#if type2}}
+                 <a href="/appointment">See Appointments</a>
+            {{else}} 
+                <a href="#blogs">blogs</a>
+                {{/if}}    
+            {{/if}}
+
             {{#if name}}
                 <span class="name">wellcome {{name}}</span>
             {{else}}
@@ -435,7 +445,7 @@ signInWithPopup(auth, provider)
    // const userdata = data.json();
     console.log(userdata);
    if(userdata){
-      location.replace(`/?name=${userdata.name}&email=${userdata.email}`)
+      location.replace(`/?name=${userdata.name}&email=${userdata.email}&type=${userdata.type}`)
    }else{
     //console.log('nill');
      location.replace(`/signup?email=${user.email}&name=${user.displayName}`);   
